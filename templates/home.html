@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Information</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="table" id="students_table">
+        <section class="table__header">
+            <h1>Team Information </h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="{{ url_for('static', filename='search.png') }}" alt="">
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="{{ url_for('static', filename='pdf.png') }}" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="{{ url_for('static', filename='json.png') }}" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="{{ url_for('static', filename='csv.png') }}" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="{{ url_for('static', filename='excel.png') }}" alt=""></label>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="add-button">Add Student</button>
+                <button class="delete-button">Delete Student</button>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> ID <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Student Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Level <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> CGPA <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Image <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Michael Morrad</td>
+                        <td>2</td>
+                        <td>3.5</td>
+                        <td><img src="{{ url_for('static', filename='Micheal.jpg') }}" alt="Michael Morrad"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mazen Mossad</td>
+                        <td>2</td>
+                        <td>3.2</td>
+                        <td><img src="{{ url_for('static', filename='user1.jpg') }}" alt="Mazen Mossad"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Asmaa Hmady</td>
+                        <td>2</td>
+                        <td>3.8</td>
+                        <td><img src="{{ url_for('static', filename='images/Asmaa_Hmady.jpg') }}" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Menna Ayman</td>
+                        <td>2</td>
+                        <td>3.9</td>
+                        <td><img src="" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Ibrahim Abdellghany</td>
+                        <td>2</td>
+                        <td>3.2</td>
+                        <td><img src="" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
